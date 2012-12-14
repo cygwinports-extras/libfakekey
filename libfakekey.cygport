@@ -1,0 +1,16 @@
+NAME="libfakekey"
+VERSION=0.1
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="Simple library for converting utf8 chars into fake keypresses."
+HOMEPAGE=  # originally project.o-hand.com; defunct
+SRC_URI="mirror://debian/pool/main/${NAME:0:4}/${NAME}/${NAME}_${VERSION}.orig.tar.gz"
+PATCH_URI="0.1-libtool22.patch
+           0.1-no-undefined.patch
+           0.1-vpath.patch"
+
+PKG_NAMES="libfakekey0 libfakekey-devel"
+libfakekey0_CONTENTS="usr/bin/cygfakekey-0.dll usr/share/doc/"
+libfakekey_devel_CONTENTS="usr/include/ usr/lib/"
+
+KEEP_LA_FILES="none"
